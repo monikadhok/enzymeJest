@@ -1,21 +1,15 @@
+
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
+
+import Foo from '../Foo';
 
 jest.dontMock('../Foo');
-
-const Foo = require('../Foo');
-
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    expect(true).toBe(true);
-    //expect(shallow(<Foo />).contains(<div className="foo" />)).toBe(true);
+describe('<Foo />', () => {
+  
+  it('renders a <p> with a static text', () => {
+    const wrapper = shallow(<Foo />);
+    expect(wrapper.contains(<p>I am not a very smart component...</p>)).toBe(true);
   });
-
-  it("contains spec with an expectation", function() {
-    //expect(shallow(<Foo />).is('.foo')).toBe(true);
-  });
-
-  it("contains spec with an expectation", function() {
-    //expect(mount(<Foo />).find('.foo').length).toBe(1);
-  });
+  
 });

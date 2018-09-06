@@ -1,22 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-const propTypes = {};
-
-const defaultProps = {};
-
-class Foo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+const Foo = React.createClass({
   render() {
     return (
-      <div className="foo" />
+      <p>I am not a very smart component...</p>
     );
   }
-}
-
-Foo.propTypes = propTypes;
-Foo.defaultProps = defaultProps;
+});
 
 export default Foo;

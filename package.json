@@ -4,7 +4,7 @@
   "description": "Example project with React + Enzyme + Jest",
   "main": "build/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --logHeapUsage --runInBand --expose-gc --detectLeaks"
   },
   "repository": {
     "type": "git",
